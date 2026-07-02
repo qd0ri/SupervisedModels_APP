@@ -8,12 +8,12 @@ def load_data(uploaded_file):
     try: 
         return pd.read.csv(uploaded_file)
     
-    except unicodeDecodeError:
+    except UnicodeDecodeError:
         try:
             uploaded_file.seek(0)  # Reset file pointer to the beginning
             return pd.read.csv(uploaded_file, encoding='windows-1252')
         
-        except unicodeDecodeError:
+        except UnicodeDecodeError:
             uploaded_file.seek(0)  
             return pd.read.csv(uploaded_file, encoding='latin1')
 
