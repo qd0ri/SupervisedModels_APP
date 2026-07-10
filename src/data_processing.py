@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 def load_data(uploaded_file):
     try: 
-        return pd.read.csv(uploaded_file)
+        return pd.read_csv(uploaded_file)
     
     except UnicodeDecodeError:
         try:
