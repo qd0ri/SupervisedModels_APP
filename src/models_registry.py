@@ -2,7 +2,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 
-def get_model(model_name):
+def get_model():
     
     
     
